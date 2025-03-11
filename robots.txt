@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://aarjav-998.github.io/exqusiteweb.com/sitemap.xml
