@@ -2,12 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://aarjav-998.github.io/exqusiteweb.com/</loc>
+    <lastmod>2025-03-11</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-    <changefreq>daily</changefreq>
   </url>
   <url>
-    <loc>https://aarjav-998.github.io/exqusiteweb.com/blogs</loc>
-    <priority>0.8</priority>
+    <loc>https://aarjav-998.github.io/exqusiteweb.com/blogs.html</loc>
+    <lastmod>2025-03-11</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>
