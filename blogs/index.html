@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exquisite Web Blogs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+    <nav class="bg-blue-600 p-5 text-white text-center text-xl font-bold">
+        Exquisite Web Blogs
+    </nav>
+
+    <section class="container mx-auto py-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="blog-container">
+            <!-- BLOGS WILL BE AUTOMATICALLY LOADED HERE -->
+        </div>
+    </section>
+
+    <script>
+        async function fetchBlogs() {
+            const response = await fetch('https://aarjav-998.github.io/exqusiteweb.com/blogs/');
+            const text = await response.text();
+
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(text, 'text/html');
+            const links = htmlDoc.querySelectorAll('a');
+
+            let html = '';
+
+            links.forEach(link => {
+                if (link.href.includes('.html')) {
+                    const title = link.href.split('/').pop().replace('.html', '').replace(/-/g, ' ');
+                    html += `
+                        <div class="bg-white p-5 rounded-lg shadow-lg">
+                            <img src="https://source.unsplash.com/400x300/?${title}" class="w-full h-40 object-cover rounded-lg mb-3">
+                            <h3 class="text-xl font-bold">${title}</h3>
+                            <a href="${link.href}" target="_blank" class="text-blue-600 hover:underline">Read More →</a>
+                        </div>
+                    `;
+                }
+            });
+
+            document.getElementById('blog-container').innerHTML = html;
+        }
+
+        fetchBlogs();
+    </script>
+
+</body>
+</html>
