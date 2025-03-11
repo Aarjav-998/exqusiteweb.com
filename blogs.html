@@ -1,55 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Exquisite Web Blogs</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exquisite Web Blogs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100">
 
-<header class="bg-blue-600 text-white text-center py-4">
-  <h1 class="text-2xl font-bold">Exquisite Web Blogs</h1>
-</header>
+    <header class="bg-blue-600 text-white text-center py-4">
+        <h1 class="text-2xl font-bold">Exquisite Web Blogs</h1>
+    </header>
 
-<div id="blogs-container" class="p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-  <!-- Blogs will appear here -->
-</div>
+    <div class="container mx-auto py-10 px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Blog 1 -->
+        <div class="bg-white rounded-lg shadow-lg p-4">
+            <h2 class="text-xl font-semibold mb-2">10 Reasons Why Every Business Needs a Professional Website</h2>
+            <p class="text-gray-600 mb-4">Discover why having a professional website is crucial for your business success...</p>
+            <a href="#" class="text-blue-600 hover:underline">Read More →</a>
+        </div>
 
-<script>
-  const repo = 'aarjav-998/exqusiteweb.com';
-  const apiUrl = `https://api.github.com/repos/${repo}/contents/blogs`;
+        <!-- Blog 2 -->
+        <div class="bg-white rounded-lg shadow-lg p-4">
+            <h2 class="text-xl font-semibold mb-2">How to Choose the Right Web Development Agency</h2>
+            <p class="text-gray-600 mb-4">Choosing the right web development company can be tough, here's a guide...</p>
+            <a href="#" class="text-blue-600 hover:underline">Read More →</a>
+        </div>
 
-  async function fetchBlogs() {
-    try {
-      const response = await fetch(apiUrl);
-      const files = await response.json();
+        <!-- Blog 3 -->
+        <div class="bg-white rounded-lg shadow-lg p-4">
+            <h2 class="text-xl font-semibold mb-2">The Importance of Responsive Design</h2>
+            <p class="text-gray-600 mb-4">Learn why having a responsive website is important in 2025 and beyond...</p>
+            <a href="#" class="text-blue-600 hover:underline">Read More →</a>
+        </div>
 
-      const container = document.getElementById('blogs-container');
-      container.innerHTML = '';
+        <!-- Blog 4 -->
+        <div class="bg-white rounded-lg shadow-lg p-4">
+            <h2 class="text-xl font-semibold mb-2">Top 5 Web Design Trends to Watch in 2025</h2>
+            <p class="text-gray-600 mb-4">Stay ahead of the curve with the latest web design trends for 2025...</p>
+            <a href="#" class="text-blue-600 hover:underline">Read More →</a>
+        </div>
 
-      files.forEach(file => {
-        if (file.name.endsWith('.html')) {
-          const fileName = file.name.replace('.html', '').replace(/-/g, ' ');
-          const fileUrl = `https://aarjav-998.github.io/exqusiteweb.com/blogs/${file.name}`;
+        <!-- Blog 5 -->
+        <div class="bg-white rounded-lg shadow-lg p-4">
+            <h2 class="text-xl font-semibold mb-2">A Step-by-Step Guide to Building Your First Website</h2>
+            <p class="text-gray-600 mb-4">Planning to build your first website? Here's a step-by-step guide...</p>
+            <a href="#" class="text-blue-600 hover:underline">Read More →</a>
+        </div>
 
-          const blogCard = `
-            <div class="bg-white p-4 rounded-lg shadow-lg">
-              <h2 class="text-xl font-semibold capitalize">${fileName}</h2>
-              <a href="${fileUrl}" class="text-blue-600 hover:underline">Read More →</a>
-            </div>
-          `;
-          container.innerHTML += blogCard;
-        }
-      });
-    } catch (error) {
-      console.error('Failed to load blogs', error);
-      document.getElementById('blogs-container').innerHTML = `<p class="text-center text-red-500">Failed to load blogs.</p>`;
-    }
-  }
+        <!-- Blog 6 -->
+        <div class="bg-white rounded-lg shadow-lg p-4">
+            <h2 class="text-xl font-semibold mb-2">Why User Experience (UX) Matters in Web Design</h2>
+            <p class="text-gray-600 mb-4">Learn how User Experience impacts your website's success...</p>
+            <a href="#" class="text-blue-600 hover:underline">Read More →</a>
+        </div>
 
-  fetchBlogs();
-</script>
+        <!-- Blog 7 -->
+        <div class="bg-white rounded-lg shadow-lg p-4">
+            <h2 class="text-xl font-semibold mb-2">The Role of SEO in Website Development</h2>
+            <p class="text-gray-600 mb-4">SEO can make or break your website. Here's why...</p>
+            <a href="#" class="text-blue-600 hover:underline">Read More →</a>
+        </div>
+
+        <!-- Blog 8 -->
+        <div class="bg-white rounded-lg shadow-lg p-4">
+            <h2 class="text-xl font-semibold mb-2">How to Optimize Your Website for Mobile Users</h2>
+            <p class="text-gray-600 mb-4">Mobile users are taking over. Optimize your website for them...</p>
+            <a href="#" class="text-blue-600 hover:underline">Read More →</a>
+        </div>
+
+        <!-- Blog 9 -->
+        <div class="bg-white rounded-lg shadow-lg p-4">
+            <h2 class="text-xl font-semibold mb-2">The Benefits of Hiring a Local Web Developer</h2>
+            <p class="text-gray-600 mb-4">Hiring a local developer has its own benefits. Learn more...</p>
+            <a href="#" class="text-blue-600 hover:underline">Read More →</a>
+        </div>
+
+        <!-- Blog 10 -->
+        <div class="bg-white rounded-lg shadow-lg p-4">
+            <h2 class="text-xl font-semibold mb-2">Custom vs. Template Websites</h2>
+            <p class="text-gray-600 mb-4">Should you use templates or go for custom design? Here's the answer...</p>
+            <a href="#" class="text-blue-600 hover:underline">Read More →</a>
+        </div>
+
+        <!-- Blog 11 -->
+        <div class="bg-white rounded-lg shadow-lg p-4">
+            <h2 class="text-xl font-semibold mb-2">Understanding the Web Development Process</h2>
+            <p class="text-gray-600 mb-4">From planning to launch, understand the entire development process...</p>
+            <a href="#" class="text-blue-600 hover:underline">Read More →</a>
+        </div>
+
+        <!-- Blog 12 -->
+        <div class="bg-white rounded-lg shadow-lg p-4">
+            <h2 class="text-xl font-semibold mb-2">Common Web Design Mistakes to Avoid</h2>
+            <p class="text-gray-600 mb-4">Avoid these common web design mistakes to boost your conversion...</p>
+            <a href="#" class="text-blue-600 hover:underline">Read More →</a>
+        </div>
+        
+    </div>
 
 </body>
 </html>
